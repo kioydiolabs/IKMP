@@ -9,7 +9,7 @@ with open('/etc/ikmp/config.json') as fd:
 
 def host_up(hostname: str):
     host = ping(hostname, count=5, interval=0.2)
-    return host.packets_senXt == host.packets_received
+    return host.packets_sent == host.packets_received
 
 
 with open('/etc/ikmp/uptime.json', 'r') as f:

@@ -12,5 +12,6 @@ systemctl reload-daemon
 systemctl enable ikmp ikmp_web
 apt install pip3 -y
 pip3 install -r /etc/ikmp/requirements.txt
+echo "installed requirements"
 nano /etc/ikmp/config.json
 systemctl start ikmp ikmp_web

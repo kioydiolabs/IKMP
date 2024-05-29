@@ -1,7 +1,7 @@
 from flask import Flask, request, Response, render_template
 import json
 
-with open('config.json', 'r') as f:
+with open('/etc/ikmp/config.json', 'r') as f:
         config = json.load(f)
 color_up = config['colors']['up']
 color_down = config['colors']['down']
@@ -12,9 +12,9 @@ app = Flask(__name__, template_folder="./templates/")
 @app.route("/")
 def index():
         data = ""
-        with open('config.json', 'r') as f:
+        with open('/etc/ikmp/config.json', 'r') as f:
                 config = json.load(f)
-        with open('uptime.json', 'r') as f:
+        with open('/etc/ikmp/uptime.json', 'r') as f:
                 uptimeFile = json.load(f)
         for i in config['hosts']:
                 if uptimeFile['hosts'][i] == "UP":

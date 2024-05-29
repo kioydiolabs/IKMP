@@ -1,6 +1,10 @@
 cd /etc
 mkdir ikmp
 cd /etc/ikmp
+mkdir templates
+cd /etc/ikmp/templates
+wget https://raw.githubusercontent.com/kioydiolabs/IKMP/main/templates/web.template.html -q
+cd /etc/ikmp
 wget https://raw.githubusercontent.com/kioydiolabs/IKMP/main/ikmp_web.py -q
 wget https://raw.githubusercontent.com/kioydiolabs/IKMP/main/ikmp.py -q
 wget https://raw.githubusercontent.com/kioydiolabs/IKMP/main/config.json -q

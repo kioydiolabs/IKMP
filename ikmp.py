@@ -4,7 +4,7 @@ import os
 import time
 
 
-with open('config.json') as fd:
+with open('/etc/ikmp/config.json') as fd:
     json_data = json.load(fd)
 
 def host_up(hostname: str):
@@ -12,7 +12,7 @@ def host_up(hostname: str):
     return host.packets_senXt == host.packets_received
 
 
-with open('uptime.json', 'r') as f:
+with open('/etc/ikmp/uptime.json', 'r') as f:
     uptimeFile = json.load(f)
 
 interval = json_data['interval']
@@ -36,8 +36,8 @@ def uptime():
                 print("DOWN - Error :",e)
             uptimeFile['hosts'][i] = (f"DOWN")
 
-        os.remove('uptime.json')
-        with open('uptime.json', 'w') as f:
+        os.remove('/etc/ikmp/uptime.json')
+        with open('/etc/ikmp/uptime.json', 'w') as f:
             json.dump(uptimeFile, f, indent=4)
 
 while True:

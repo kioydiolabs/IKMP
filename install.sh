@@ -1,12 +1,12 @@
-cd /etc/
+cd /etc
 mkdir ikmp
-cd /etc/ikmp/
+cd /etc/ikmp
 wget https://raw.githubusercontent.com/kioydiolabs/IKMP/main/ikmp_web.py
 wget https://raw.githubusercontent.com/kioydiolabs/IKMP/main/ikmp.py
 wget https://raw.githubusercontent.com/kioydiolabs/IKMP/main/config.json
 wget https://raw.githubusercontent.com/kioydiolabs/IKMP/main/uptime.json
 wget https://raw.githubusercontent.com/kioydiolabs/IKMP/main/requirements.txt
-cd /etc/system/systemd/
+cd /etc/systemd/system
 wget https://raw.githubusercontent.com/kioydiolabs/IKMP/main/ikmp_web.service
 wget https://raw.githubusercontent.com/kioydiolabs/IKMP/main/ikmp.service
 systemctl reload-daemon

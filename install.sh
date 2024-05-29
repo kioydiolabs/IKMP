@@ -8,10 +8,10 @@ wget https://raw.githubusercontent.com/kioydiolabs/IKMP/main/uptime.json -q
 wget https://raw.githubusercontent.com/kioydiolabs/IKMP/main/requirements.txt -q
 wget https://raw.githubusercontent.com/kioydiolabs/IKMP/main/ikmp_web.service -q --directory-prefix=/etc/systemd/system
 wget https://raw.githubusercontent.com/kioydiolabs/IKMP/main/ikmp.service -q --directory-prefix=/etc/systemd/system
-systemctl reload-daemon
+systemctl daemon-reload
 systemctl enable ikmp ikmp_web
-apt install pip3 -y
-pip3 install -r /etc/ikmp/requirements.txt
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -qq python3-pip < /dev/null > /dev/null
+pip install -r /etc/ikmp/requirements.txt
 echo "installed requirements"
 nano /etc/ikmp/config.json
 systemctl start ikmp ikmp_web

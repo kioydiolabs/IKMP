@@ -1,0 +1,30 @@
+{
+  "interval" : "5",
+  "debug" : "2",
+  "colors" : {
+    "up" : "#60bb50",
+    "down" : "#ff2121"
+  },
+  "hosts" :  {
+    "1" : {
+      "address" : "google.com",
+      "webpage_link" : "https://google.com",
+      "webpage_name" : "Google"},
+    "2" : {
+      "address" : "microsoft.com",
+      "webpage_link" : "https://microsoft.com",
+      "webpage_name" : "Microsoft"},
+    "3" : {
+      "address" : "apple.com",
+      "webpage_link" : "https://apple.com",
+      "webpage_name" : "Apple"},
+    "4" : {
+      "address" : "kioydiolabs.org",
+      "webpage_link" : "https://kioydiolabs.org",
+      "webpage_name" : "KioydioLabs"},
+    "5" : {
+      "address" : "google.gov",
+      "webpage_link" : "https://google.gov",
+      "webpage_name" : "Google Gov"}
+  }
+}

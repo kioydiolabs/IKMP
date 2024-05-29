@@ -1,0 +1,11 @@
+[Unit]
+Description=IKMP Website
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=python3 /etc/ikmp/ikmp_web.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

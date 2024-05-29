@@ -1,0 +1,11 @@
+[Unit]
+Description=IKMP Scraper
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=python3 /etc/ikmp/ikmp.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

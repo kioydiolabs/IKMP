@@ -1,5 +1,5 @@
 {
-  "interval" : "5",
+  "interval" : "100",
   "debug" : "2",
   "colors" : {
     "up" : "#60bb50",
@@ -9,22 +9,32 @@
     "1" : {
       "address" : "google.com",
       "webpage_link" : "https://google.com",
-      "webpage_name" : "Google"},
+      "webpage_name" : "Google",
+      "monitor_type" : "icmp",
+      "HERC" : [""]},
     "2" : {
-      "address" : "microsoft.com",
+      "address" : "https://microsoft.com",
       "webpage_link" : "https://microsoft.com",
-      "webpage_name" : "Microsoft"},
+      "webpage_name" : "Microsoft",
+      "monitor_type" : "http",
+      "HERC" : ["301","200"]},
     "3" : {
       "address" : "apple.com",
       "webpage_link" : "https://apple.com",
-      "webpage_name" : "Apple"},
+      "webpage_name" : "Apple",
+      "monitor_type" : "icmp",
+      "HERC" : [""]},
     "4" : {
-      "address" : "kioydiolabs.org",
+      "address" : "https://kioydiolabs.org",
       "webpage_link" : "https://kioydiolabs.org",
-      "webpage_name" : "KioydioLabs"},
+      "webpage_name" : "KioydioLabs",
+      "monitor_type" : "http",
+      "HERC" : ["200"]},
     "5" : {
       "address" : "google.gov",
       "webpage_link" : "https://google.gov",
-      "webpage_name" : "Google Gov"}
+      "webpage_name" : "Google Gov",
+      "monitor_type" : "icmp",
+      "HERC" : [""]}
   }
 }
